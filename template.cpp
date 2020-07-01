@@ -1,38 +1,76 @@
 /*
  * flirt++
- * https://https://github.com/riajuu/flirtplusplus
+ * https://github.com/riajuu/flirtplusplus
  */
 #include<bits/stdc++.h>
+#include <ext/pb_ds/assoc_container.hpp>
+#include <ext/pb_ds/tree_policy.hpp>
+ 
 using namespace std;
+using namespace __gnu_pbds;
 
-#define pb push_back
-#define mp make_pair
+// ?
+#define give_up_chase return 
+#define not_found !
 
-#define check cin >>
+#define girl int
+#define increase ++
+#define decrease --
+#define harem vector<int>
+#define todolist vector<int>
+#define phone_book map<int,int>
+
+#define with +
+#define without -
+#define wan 1
+#define hug *
+#define ghost /
+#define kiss %
+
+#define ConfessionResult bool
+#define couple pair<ll,ll>
+#define couples vector<couple>
+
+// i/o
+#define also >>
 
 #define say cout <<
 #define nicely << endl
 
-#define initialize_playboy_mode ios_base::sync_with_stdio(0);
-#define breakup_with_gf cin.tie(0);
-
 #define messed_up cout << -1 << endl;
+
+// bool
 #define isRiajuu true
 #define isNotRiajuu false
+#define rejected return false
+#define accepted return true
 
+// pairs
 #define wife first
 #define spare second
+#define gf first
+#define bf second
 
-#define sortharem sort 
-
+// main()
 #define mgod main
-#define wan 1
-#define confess return 0
+#define learn_about cin >>
+#define move_on_to_next_girl number_of_girls--;
+#define confess return;
+#define end_up_being_single_anyway return 0;
+#define i_only_chase_one_girl number_of_girls = 1;
+#define initialize_playboy_mode ios_base::sync_with_stdio(0);
+#define search_for_new_girls cin.tie(0);
 
+// loops
 #define drink_pepsi break
 #define text_back continue
 
-const int MOD=1e9+7;
+// vectors
+#define in_a_relationship make_pair
+#define add_to_harem push_back
+#define add_to_friend_list push_back
+#define add_to_plan push_back
+#define remove_from_plan pop_back
 
 typedef int single;
 typedef void skill;
@@ -42,64 +80,48 @@ typedef pair<ll, ll> ii;
 typedef vector<ll> vi;
 typedef vector<ii> vii;
 
-class Riajuu
+void sweettalk(ll x)
 {
-	public:
-	
-	bool showthoughts = false;
-	int testcount=1;
-	
-	void hears(int &x) {
-		cin>>x; 
+	cout<<x<<'\n';
+}
+ 
+void sweettalk(string x)
+{
+	cout<<x<<'\n';
+}
+void sweettalk(const vector<int> &vec)
+{
+	for(int i=0;i<(int)vec.size();i++)
+	{
+		cout<<vec[i];
+		if(i+1<(int)vec.size()) cout<<' ';
 	}
-	
-	// DEALING WITH NUMBER OF TESTCASES
-	void count_girls() {
-		cin>>testcount;
+	cout<<'\n';
+}
+void sweettalk(const set<int> &vec)
+{
+	for(int v:vec)
+	{
+		cout<<v<<' ';
 	}
-	bool stillRiajuu() {
-		testcount--;
-		if(testcount>=0) return true;
-		else return false;
-	}
-	
-	// DEBUG FUNCTIONS
-	void expose_thoughts() {
-		showthoughts = true;
-	}
-	void think(int x, string s = "") {
-		if(showthoughts){
-			cerr << s << x << endl;
-		}
-	}
-	void think2d(int a[], int n, string s = "") {
-		if(showthoughts){
-			cerr << s;
-			for(int i=0;i<n;i++) cerr << a[i] << " ";
-			cerr << endl;
-		}
-	}
-	void think3d(vector<int> v1, string s = "") {
-		if(showthoughts){
-			cerr << s;
-			for(auto i:v1){
-				cerr << i << " ";
-			}
-			cerr << endl;
-		}
-	}
-} MGod;
+	cout<<'\n';
+}
 
-skill flirt() {
-    // stuff
-    return;
+skill flirt_with_girl() {
+	// stuff
+	give_up_chase;
 }
 
 single mgod() {
-    initialize_playboy_mode;
-    breakup_with_gf;
-    // MGod.expose_thoughts(); // DEBUG
-    MGod.count_girls(); // read number of testcases, comment if only needs to flirt() once
-    while(MGod.stillRiajuu()) flirt(); // flirt() for each testcases
-    confess;
+	initialize_playboy_mode;
+	search_for_new_girls;
+	int number_of_girls;
+	learn_about number_of_girls;
+	// i_only_chase_one_girl;
+	while(number_of_girls>0)
+	{
+		flirt_with_girl();
+		move_on_to_next_girl;
+	}
+	end_up_being_single_anyway;
 }
