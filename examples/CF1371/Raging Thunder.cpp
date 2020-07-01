@@ -290,12 +290,20 @@ FamilyMember reproduce(const FamilyMember &wife, const FamilyMember &husband)
 		{
 			new_parent.youth_power[step] = wife.youth_power[step] + husband.youth_power[step];
 		}
+		else if(wife.youth_power[step] == wife.age && wife.old[step].bf == husband.youth[step].bf)
+		{
+			new_parent.youth_power[step] = wife.youth_power[step] + husband.youth_power[step];
+		}
 		else
 		{
 			new_parent.youth_power[step] = wife.youth_power[step];
 		}
 		//old power
 		if(husband.old[step].gf == husband.age && husband.old[step].bf == zero) //full same sia and go to the left!
+		{
+			new_parent.old_power[step] = wife.old_power[step] + husband.old_power[step];
+		}
+		else if(husband.old_power[step] == husband.age && wife.old[step].bf == husband.youth[step].bf)
 		{
 			new_parent.old_power[step] = wife.old_power[step] + husband.old_power[step];
 		}
